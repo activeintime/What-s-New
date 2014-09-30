@@ -67,4 +67,6 @@
 /// @discussion The default is @c YES.
 @property (nonatomic) BOOL templatedIcons;
 
+@property (nonatomic, copy) NSString *titleString;
+
 @end

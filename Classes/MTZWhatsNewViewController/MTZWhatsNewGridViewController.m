@@ -64,6 +64,8 @@ static const NSString *kIconName = @"icon";
 
 - (void)__MTZWhatsNewGridViewController_Setup
 {
+    self.titleString = NSLocalizedStringFromTable(@"What’s New", @"WhatsNew", nil);
+    
 	// Feature collection view.
 	self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
 	self.flowLayout.minimumLineSpacing = 2;
@@ -241,7 +243,7 @@ static const NSString *kIconName = @"icon";
 	label.translatesAutoresizingMaskIntoConstraints = NO;
 	[view addConstraints:[NSLayoutConstraint constraintsToStretchHorizontallyToSuperview:label]];
 	[view addConstraints:[NSLayoutConstraint constraintsToStretchVerticallyToSuperview:label]];
-	label.text = NSLocalizedStringFromTable(@"What’s New", @"WhatsNew", nil);
+    label.text = self.titleString;
 	label.textColor = [self contentColor];
 	label.textAlignment = NSTextAlignmentCenter;
 	
