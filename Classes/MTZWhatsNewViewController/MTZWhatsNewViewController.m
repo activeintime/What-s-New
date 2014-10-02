@@ -180,6 +180,12 @@
 	[self.dismissButton setTitle:_dismissButtonTitle forState:UIControlStateNormal];
 }
 
+- (void)setDismissButtonTextColor:(UIColor *)dismissButtonTextColor
+{
+    _dismissButtonTextColor = dismissButtonTextColor;
+    [self.dismissButton setTintColor:dismissButtonTextColor];
+}
+
 - (void)setContentInset:(UIEdgeInsets)contentInset
 {
 	_contentInset = contentInset;
